@@ -1,33 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'/>
-  <title>Document</title>
-  <script src='js/index.js'></script>
-  <link rel='stylesheet' href='index.css'/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Search App</title>
+  <style>
+    /* Add some basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .user-result, .repo-result {
+      margin-bottom: 20px;
+    }
+    .repo-card {
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
-  <div id='main'>
 
-    <h2>GitHub Search</h2>
+  <h1>GitHub User & Repo Search</h1>
+  
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search for GitHub user..." required>
+    <button type="submit">Search Users</button>
+    <button type="button" id="repo-search-btn">Search Repos</button>
+  </form>
 
-    <form id='github-form'>
-      <input id='search' type='text' name='search'>
-      <input type='submit' name='submit'/>
-    </form>
+  <h2>Users</h2>
+  <div id="user-results"></div>
 
-    <div id='github-container'>
-      <ul id='user-list'>
+  <h2>Repositories</h2>
+  <div id="repo-results"></div>
 
-      </ul>
-
-      <ul id='repos-list'>
-
-      </ul>
-    </div>
-
-  </div>
-
+  <script src="index.js"></script>
 </body>
 </html>
